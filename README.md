@@ -179,6 +179,9 @@ The architecture prioritizes low-bandwidth communication, accessibility, modular
 ### USER FLOW DIAGRAM:
 
 
+## User Flow Diagram
+
+```mermaid
 flowchart TD
     A([Start]) --> B{User Type}
 
@@ -231,6 +234,8 @@ flowchart TD
     AF --> AG[Assign Transport]
     AG --> AH[Pickup and Delivery]
     AH --> AI[Order Completed]
+```
+
 
 
 
