@@ -176,6 +176,63 @@ The system will be developed using a dual-interface architecture that accommodat
 
 The architecture prioritizes low-bandwidth communication, accessibility, modular development, scalability and cost-efficient agricultural logistics.
 
+### USER FLOW DIAGRAM:
+
+
+flowchart TD
+    A([Start]) --> B{User Type}
+
+    B -->|Farmer| C[Dial Toll-Free Number]
+    C --> D[IVR Voice Menu]
+    D --> E[Select Language]
+    E --> F{Choose Service}
+
+    F -->|Register| G[Enter Farmer Details]
+    F -->|Sell Produce| H[Select Crop]
+    F -->|Check Price| I[Request Market Price]
+    F -->|Orders| J[Check Order Status]
+
+    G --> K[Backend API]
+    H --> L[Enter Quantity and Expected Price]
+    L --> M[Confirm Produce Listing]
+    M --> K
+
+    I --> K
+    J --> K
+
+    K --> N[(Database)]
+    K --> O[AI Processing Engine]
+
+    O --> P[Demand Forecasting]
+    O --> Q[Buyer Matching]
+    O --> R[Price Intelligence]
+
+    P --> S[Marketplace]
+    Q --> S
+    R --> T[Voice / SMS Response]
+    T --> U[Farmer Receives Information]
+
+    S --> V[Buyer Web Application]
+    B -->|Buyer| V
+
+    V --> W[Browse Produce]
+    W --> X[Place Bulk Order]
+    X --> Y[Order Processing Backend]
+
+    Y --> Z[Notify Farmer Through IVR / SMS]
+    Z --> AA{Farmer Accepts?}
+
+    AA -->|Yes| AB[Confirm Order]
+    AA -->|No| AC[Notify Buyer and Find Alternative]
+
+    AB --> AD[Logistics Module]
+    AD --> AE[Aggregate Nearby Orders]
+    AE --> AF[Route Optimization]
+    AF --> AG[Assign Transport]
+    AG --> AH[Pickup and Delivery]
+    AH --> AI[Order Completed]
+
+
 
 ## Feasibility and Viability:
 
